@@ -36,7 +36,7 @@ cd px4_ros2_ws/src
 
 ---
 
-### **2️⃣ Clone the Repository**
+### **2️⃣ Clone the Repository with Submodules**
 
 ```bash
 git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
