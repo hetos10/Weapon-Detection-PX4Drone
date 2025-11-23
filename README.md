@@ -121,7 +121,7 @@ cd PX4-Autopilot/
 make px4_sitl
 ```
 
-### Test the SITL simulation (Terminal 1)
+## Test the SITL simulation (Terminal 1)
 
 ```bash
 make px4_sitl gz_x500
