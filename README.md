@@ -24,7 +24,7 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 
 ---
 
-##Clone the Project with submodules
+## Clone the Project with submodules
 
 ```bash
 git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
