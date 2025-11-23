@@ -111,7 +111,7 @@ pip install --user -U empy==3.3.4 pyros-genmsg setuptools
 
 ---
 
-### 2️⃣ Install PX4 Autopilot (Simulation) (terminal 1)
+### 2️⃣ Install PX4 Autopilot (Simulation)
 
 ```bash
 cd
@@ -121,7 +121,7 @@ cd PX4-Autopilot/
 make px4_sitl
 ```
 
-Test the SITL simulation
+### Test the SITL simulation (Terminal 1)
 
 ```bash
 make px4_sitl gz_x500
