@@ -264,6 +264,6 @@ Expected output:
 ## 🙌 Credits
 
 Maintained by **[Curious-Utkarsh](https://github.com/Curious-Utkarsh)**
-Inspired by real-world **pick-and-place robotic** applications.
+Inspired by real-world **drone teleoperation robotic** applications.
 
 ---
