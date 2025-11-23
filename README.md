@@ -24,52 +24,94 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 
 ---
 
-## Clone the Project with submodules
+# 🚀 Quick Start — How to Use This Repository
+
+### **1️⃣ Create Your ROS 2 Workspace**
+
+```bash
+cd ~
+mkdir -p px4_ros2_ws/src
+cd px4_ros2_ws/src
+```
+
+---
+
+### **2️⃣ Clone the Repository**
 
 ```bash
 git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
 ```
 
+---
 
-## 🚀 Run the Final Project
+### **3️⃣ Install Dependencies**
 
-Once all setup steps are complete, you can launch the full system using the provided ROS 2 launch files.
+Use `rosdep` to automatically install all required ROS 2 dependencies:
 
-### 🛠️ Terminal 1 — Start PX4 + Gazebo + XRCE Agent (via bringup)
+```bash
+cd ~/px4_ros2_ws
+sudo apt install python3-rosdep -y
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src -r -y
+```
+
+---
+
+### **4️⃣ Build the Workspace**
+
+```bash
+colcon build
+```
+
+---
+
+### **5️⃣ Source the Workspace**
+
+```bash
+source install/setup.bash
+```
+
+---
+
+### **6️⃣ Launch the Simulation + PX4 + XRCE Agent**
+
+In **Terminal 1**, start the full PX4 bringup:
 
 ```bash
 ros2 launch px_bringup minimal.launch.py
 ```
 
-✔️ This will automatically:
+✔️ This launches:
 
-* Start **PX4 SITL**
-* Launch **Gazebo Sim** with the drone
-* Start the **Micro XRCE-DDS Agent**
-* Bring up all required bridges
+* PX4 SITL
+* Gazebo Sim with drone
+* Micro XRCE-DDS Agent
+* PX4–ROS2 communication bridge
 
-A drone will appear in Gazebo.
+A drone will appear in Gazebo. 🛸
 
 ---
 
-### 🎮 Terminal 2 — Start Teleoperation (Choose either Keyboard or Joystick)
+### **7️⃣ Run Teleoperation (Keyboard or Joystick)**
 
-#### **Keyboard Teleoperation**
+Open **Terminal 2**, choose **either keyboard or joystick teleoperation**:
+
+#### 🖮 Keyboard Teleoperation
 
 ```bash
 ros2 launch px4_offboard keyboard_teleop.launch.py
 ```
 
-#### **Joystick Teleoperation**
+#### 🎮 Joystick Teleoperation
 
 ```bash
 ros2 launch px4_offboard joystick_teleop.launch.py
 ```
 
-✔️ Now you can control the drone in Gazebo using either **keyboard** or **joystick** inputs.
+You can now control the drone in Gazebo! 🚀🕹️
 
 ---
-
 
 ## 🧩 Setup Guide
 
