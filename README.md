@@ -30,6 +30,45 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
 ```
 
+## 🚀 Run the Final Project
+
+Once all setup steps are complete, you can launch the full system using the provided ROS 2 launch files.
+
+### 🛠️ Terminal 1 — Start PX4 + Gazebo + XRCE Agent (via bringup)
+
+```bash
+ros2 launch px_bringup minimal.launch.py
+```
+
+✔️ This will automatically:
+
+* Start **PX4 SITL**
+* Launch **Gazebo Sim** with the drone
+* Start the **Micro XRCE-DDS Agent**
+* Bring up all required bridges
+
+A drone will appear in Gazebo.
+
+---
+
+### 🎮 Terminal 2 — Start Teleoperation (Choose Keyboard or Joystick)
+
+#### **Keyboard Teleoperation**
+
+```bash
+ros2 launch px4_offboard keyboard_teleop.launch.py
+```
+
+#### **Joystick Teleoperation**
+
+```bash
+ros2 launch px4_offboard joystick_teleop.launch.py
+```
+
+✔️ Now you can control the drone in Gazebo using either **keyboard** or **joystick** inputs.
+
+---
+
 ## 🧩 Setup Guide
 
 > 💡 Open three terminals — one each for **PX4 SITL**, **XRCE Agent**, and **QGroundControl**.
@@ -208,45 +247,6 @@ Expected output:
 | QGroundControl fails to launch | Install `libfuse2` and `gstreamer` plugins |
 | XRCE Agent port busy           | Ensure no other agent process is running   |
 | No ROS topics                  | Confirm PX4 and XRCE Agent are running     |
-
----
-
-## 🚀 Run the Final Project
-
-Once all setup steps are complete, you can launch the full system using the provided ROS 2 launch files.
-
-### 🛠️ Terminal 1 — Start PX4 + Gazebo + XRCE Agent (via bringup)
-
-```bash
-ros2 launch px_bringup minimal.launch.py
-```
-
-✔️ This will automatically:
-
-* Start **PX4 SITL**
-* Launch **Gazebo Sim** with the drone
-* Start the **Micro XRCE-DDS Agent**
-* Bring up all required bridges
-
-A drone will appear in Gazebo.
-
----
-
-### 🎮 Terminal 2 — Start Teleoperation (Choose Keyboard or Joystick)
-
-#### **Keyboard Teleoperation**
-
-```bash
-ros2 launch px4_offboard keyboard_teleop.launch.py
-```
-
-#### **Joystick Teleoperation**
-
-```bash
-ros2 launch px4_offboard joystick_teleop.launch.py
-```
-
-✔️ Now you can control the drone in Gazebo using either **keyboard** or **joystick** inputs.
 
 ---
 
