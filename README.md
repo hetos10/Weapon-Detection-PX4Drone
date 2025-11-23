@@ -1,14 +1,9 @@
-Perfect ✅ Kumar — here’s the **final polished, minimal, and professional version** of your README for **Drone_Teleoperation_Using_Keyboard (ROS 2 + PX4)**.
-
-It uses the **preferred PX4 installation method**, includes **ROS 2 Humble setup**, **Python dependencies**, **Micro XRCE-DDS Agent v2.4.3**, and ends with **ROS 2 integration + verification**.
-Everything is cleanly formatted and concise — ideal for college workshops or GitHub.
-
 ---
 
-# 🛸 Drone Teleoperation Using Keyboard (ROS 2 + PX4)
+# 🛸 Drone Teleoperation Using KeyBoard/ Joystick (ROS 2 + PX4)
 
-Control a **simulated drone in Gazebo** using **keyboard commands** via **ROS 2 Humble** and **PX4 Autopilot**.
-Visualize sensor data in **RViz**, monitor in **QGroundControl**, and bridge communication using the **Micro XRCE-DDS Agent**.
+Control a **simulated drone** using **keyboard/ joystick commands** via **ROS 2 Humble** and **PX4 Autopilot**.
+Visualize in **Gazebo**, monitor in **QGroundControl**, and bridge communication using the **Micro XRCE-DDS Agent**.
 
 ---
 
@@ -16,9 +11,9 @@ Visualize sensor data in **RViz**, monitor in **QGroundControl**, and bridge com
 
 Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 
-* Run drone simulation in Gazebo Fortress
-* Monitor with QGroundControl and RViz
-* Control it with your keyboard via ROS 2 topics
+* Run drone simulation in Gazebo Sim
+* Monitor with QGroundControl
+* Control it with your keyboard/ joystick via ROS 2 topics
 
 ---
 
@@ -30,6 +25,12 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 * 💡 Basic terminal knowledge
 
 ---
+
+##Clone the Project
+
+```bash
+git clone -b v2.4.3 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+```
 
 ## 🧩 Setup Guide
 
