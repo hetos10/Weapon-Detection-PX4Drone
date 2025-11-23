@@ -260,3 +260,10 @@ Expected output:
 * [QGroundControl Guide](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 
 ---
+
+## 🙌 Credits
+
+Maintained by **[Curious-Utkarsh](https://github.com/Curious-Utkarsh)**
+Inspired by real-world **pick-and-place robotic** applications.
+
+---
