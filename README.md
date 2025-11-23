@@ -30,6 +30,7 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
 ```
 
+
 ## 🚀 Run the Final Project
 
 Once all setup steps are complete, you can launch the full system using the provided ROS 2 launch files.
@@ -68,6 +69,7 @@ ros2 launch px4_offboard joystick_teleop.launch.py
 ✔️ Now you can control the drone in Gazebo using either **keyboard** or **joystick** inputs.
 
 ---
+
 
 ## 🧩 Setup Guide
 
@@ -119,7 +121,7 @@ cd PX4-Autopilot/
 make px4_sitl
 ```
 
-Test the SITL simulation:
+Test the SITL simulation (Terminal 1)
 
 ```bash
 make px4_sitl gz_x500
