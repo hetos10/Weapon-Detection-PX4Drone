@@ -86,14 +86,14 @@ Test the SITL simulation:
 make px4_sitl gz_x500
 ```
 
-✅ Gazebo Fortress should launch with an x500 drone model.
+✅ Gazebo Sim should launch with an x500 drone model.
 
 ---
 
 ### 3️⃣ Install and Run Micro XRCE-DDS Agent (Terminal 2)
 
 ```bash
-git clone -b v2.4.3 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
 cd Micro-XRCE-DDS-Agent
 mkdir build && cd build
 cmake ..
@@ -205,10 +205,48 @@ Expected output:
 
 | Issue                          | Solution                                   |
 | ------------------------------ | ------------------------------------------ |
-| Gazebo model missing           | Re-install `libgazebo-fortress-dev`        |
 | QGroundControl fails to launch | Install `libfuse2` and `gstreamer` plugins |
 | XRCE Agent port busy           | Ensure no other agent process is running   |
 | No ROS topics                  | Confirm PX4 and XRCE Agent are running     |
+
+---
+
+## 🚀 Run the Final Project
+
+Once all setup steps are complete, you can launch the full system using the provided ROS 2 launch files.
+
+### 🛠️ Terminal 1 — Start PX4 + Gazebo + XRCE Agent (via bringup)
+
+```bash
+ros2 launch px_bringup minimal.launch.py
+```
+
+✔️ This will automatically:
+
+* Start **PX4 SITL**
+* Launch **Gazebo Sim** with the drone
+* Start the **Micro XRCE-DDS Agent**
+* Bring up all required bridges
+
+A drone will appear in Gazebo.
+
+---
+
+### 🎮 Terminal 2 — Start Teleoperation (Choose Keyboard or Joystick)
+
+#### **Keyboard Teleoperation**
+
+```bash
+ros2 launch px4_offboard keyboard_teleop.launch.py
+```
+
+#### **Joystick Teleoperation**
+
+```bash
+ros2 launch px4_offboard joystick_teleop.launch.py
+```
+
+✔️ Now you can control the drone in Gazebo using either **keyboard** or **joystick** inputs.
 
 ---
 
@@ -220,14 +258,3 @@ Expected output:
 * [QGroundControl Guide](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 
 ---
-
-## 🚀 Next Step
-
-Would you like me to now add:
-
-1. 🎮 A ready-to-run **Keyboard Teleop Node (Python)**, or
-2. 🧩 A **single launch file** that starts PX4 SITL, XRCE Agent, and Teleop together?
-
----
-
-Would you like me to append the **Keyboard Teleoperation Node section** (with full ROS 2 Python code + launch file) next?
