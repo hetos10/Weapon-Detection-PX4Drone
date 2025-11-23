@@ -51,7 +51,7 @@ A drone will appear in Gazebo.
 
 ---
 
-### 🎮 Terminal 2 — Start Teleoperation (Choose Keyboard or Joystick)
+### 🎮 Terminal 2 — Start Teleoperation (Choose either Keyboard or Joystick)
 
 #### **Keyboard Teleoperation**
 
