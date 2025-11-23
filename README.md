@@ -1,5 +1,3 @@
----
-
 # 🛸 Drone Teleoperation Using KeyBoard/ Joystick (ROS 2 + PX4)
 
 Control a **simulated drone** using **keyboard/ joystick commands** via **ROS 2 Humble** and **PX4 Autopilot**.
@@ -26,10 +24,10 @@ Create a ROS 2-based teleoperation setup for a PX4 SITL drone:
 
 ---
 
-##Clone the Project
+##Clone the Project with submodules
 
 ```bash
-git clone -b v2.4.3 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
+git clone https://github.com/MechaMind-Labs/ROS2-PX4_Drone_Teleoperation_Using_Joystick.git --recursive
 ```
 
 ## 🧩 Setup Guide
